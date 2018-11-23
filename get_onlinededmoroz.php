@@ -14,10 +14,10 @@ $client = new Client([
     ]
 ]);
 
-$jobId = 486;
+$jobId = 5;
 
 try {
-    $response = $client->get("/public/api/jobs/5/monitor");
+    $response = $client->get("/public/api/jobs/$jobId/monitor");
 
     if (200 !== $response->getStatusCode()) {
         throw new \RuntimeException("Unexpected response code status received, expected [ 200 ], received [ {$response->getStatusCode()} ]");
